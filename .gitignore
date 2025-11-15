@@ -1,7 +1,6 @@
 ############################
 # OS X
 ############################
-
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -14,14 +13,12 @@ Icon
 ############################
 # Linux
 ############################
-
 *~
 
 
 ############################
 # Windows
 ############################
-
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -35,7 +32,6 @@ $RECYCLE.BIN/
 ############################
 # Packages
 ############################
-
 *.7z
 *.csv
 *.dat
@@ -62,20 +58,21 @@ $RECYCLE.BIN/
 
 
 ############################
-# Logs and databases
+# Logs / DB
 ############################
-
-.tmp
 *.log
+*.tmp
 *.sql
 *.sqlite
 *.sqlite3
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 
 ############################
-# Misc.
+# Misc
 ############################
-
 *#
 ssl
 .idea
@@ -85,22 +82,22 @@ public/uploads/*
 .tsbuildinfo
 .eslintcache
 
+
 ############################
 # Node.js
 ############################
-
-lib-cov
-lcov.info
+node_modules/
 pids
 logs
 results
-node_modules
+coverage
+.nyc_output
 .node_history
+
 
 ############################
 # Package managers
 ############################
-
 .yarn/*
 !.yarn/cache
 !.yarn/unplugged
@@ -109,23 +106,40 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
-yarn-error.log
+.pnp.js
+
 
 ############################
-# Tests
+# Docker
 ############################
+docker-data/
+docker-volume/
+docker-compose.override.yml
 
-coverage
+
+############################
+# ENV / Config sensitive
+############################
+.env
+.env.*       # .env.production, .env.staging, .env.local
+.env.local
+.env.production.local
+.env.development.local
+.env.test.local
+
 
 ############################
 # Strapi
 ############################
-
-.env
-license.txt
-exports
 .strapi
-dist
-build
 .strapi-updater.json
 .strapi-cloud.json
+exports
+license.txt
+build/
+dist/
+.cache/
+.tmp/            # cache del admin
+.temp/           # temporal del build del admin
+admin/src/.cache
+admin/build
